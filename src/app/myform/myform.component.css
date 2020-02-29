@@ -1,0 +1,11 @@
+label
+{
+    color: #0f4c81;
+}
+input.ng-invalid.ng-touched{
+    border-color: red;
+}
+
+
+div { background-color: #a1eafb; }
+

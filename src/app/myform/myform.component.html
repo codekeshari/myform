@@ -1,0 +1,61 @@
+<!-- <h1 class="text-white bg-danger text-center p-8">Employee Details Form</h1> -->
+
+<div class="container colr">
+    <h1 class="text-white bg-danger text-center p-8">Employee Details Form 
+         <!-- <br>  <input type ="submit"   value="Employee List"  class="btn btn-outline-warning" (click)="onClickMe()">  -->
+        </h1>
+    <div id="correct"></div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- form -->
+            <form [formGroup]='myform' (ngsubmit)='myfun(myform)' #userForm='ngForm' >
+                <div class="form-group">
+                    <label for="">Employee Name</label>
+                    <input required type="text" formControlName='fname' id="" class="form-control" placeholder="Enter your name">
+                      <!-- <select formControlName="fname" class="form-group" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>  -->
+                </div>
+                <div class="form-group">
+                    <label for="">Age</label>
+                    <input type="number" formControlName='lname' id="" class="form-control" placeholder="Enter your Age">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="">Age</label>
+                    <input type="number" formControlName='lname' id="" class="form-control" placeholder="Enter your Age" >
+                </div> -->
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email"formControlName='email' id="" class="form-control" placeholder="example@xyz">
+
+                </div>
+                <div class="form-group">
+                    <label for="">Contact</label>
+                    <input required type="number" formControlName='street' id="" class="form-control" placeholder="Enter your Contact No.">
+                </div>
+                <div class="form-group">
+                    <label for="">Address</label>
+                    <input type="text" formControlName='city' id="" class="form-control" placeholder="Enter your Address">
+                </div>
+                <div class="form-group" >
+                    <label for="">Bio</label>
+                    <textarea type="text" formControlName='state' id="" class="form-control" placeholder="About Yourself" ></textarea>
+                </div>
+                <br>
+                <br>
+                
+
+                <input type ="submit" value="SUBMIT" class="btn btn-outline-danger" (click)="onClickMe()" [disabled]="userForm.form.invalid" >&nbsp;&nbsp;
+                <input type ="reset" value="RESET" class="btn btn-outline-danger" (click)="onClickMe()" >
+
+
+
+
+            </form>
+        </div>
+      
